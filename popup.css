@@ -1,0 +1,24 @@
+.toogle-btn.auto-invite-friend-btn {
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  width: 32px;
+  height: 32px;
+  background-color: cornflowerblue;
+  border-radius: 0.5rem;
+  margin-top: 5px;
+}
+
+.toogle-btn.auto-invite-friend-btn .count-loop {
+  position: absolute;
+  z-index: 10;
+  right: -5px;
+  top: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: red;
+  font-size: 14px;
+  line-height: 20px;
+}

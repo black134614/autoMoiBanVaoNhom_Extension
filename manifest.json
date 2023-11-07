@@ -1,0 +1,38 @@
+{
+  "name": "Auto thêm bạn vào nhóm",
+  "version": "0.1.0",
+  "description": "Niêm yết sản phẩm lên các nhóm Facebook hàng loạt nhưng không tính spam",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://*.facebook.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.facebook.com/*"],
+      "js": ["contentScript.js"],
+      "css": ["popup.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/ext-icon.png",
+        "assets/invite-friends-on.png",
+        "assets/invite-friends-off.png",
+        "assets/loading.gif"
+      ],
+      "matches": ["https://*.facebook.com/*"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/ext-icon.png",
+      "24": "assets/ext-icon.png",
+      "32": "assets/ext-icon.png"
+    },
+    "default_title": "Auto cướp bạn",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3
+}
